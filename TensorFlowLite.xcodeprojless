@@ -98,6 +98,10 @@
         {
           "framework": "CoreML.framework",
           "link": true
+        },
+        {
+          "framework": "Metal.framework",
+          "link": true
         }
       ],
       "buildVersion": 1.0,
@@ -157,6 +161,10 @@
       },
       "sources": [
         {
+          "path": "Headers",
+          "buildPhase": "headers"
+        },
+        {
           "path": "Sources",
           "excludes": [
           ]
@@ -166,6 +174,10 @@
     },
     "TensorFlowLite-arch64-ios-sim": {
       "dependencies": [
+        {
+          "framework": "Metal.framework",
+          "link": true
+        },
         {
           "framework": "Dependencies/libtensorflowlite_aarch64-apple-ios-sim.a",
           "link": true
@@ -230,6 +242,10 @@
         }
       },
       "sources": [
+        {
+          "path": "Headers",
+          "buildPhase": "headers"
+        },
         {
           "path": "Sources",
           "excludes": [
