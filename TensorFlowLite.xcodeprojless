@@ -1,0 +1,241 @@
+{
+  "configFiles": {
+  },
+  "configs": {
+    "Debug": "debug",
+    "Release": "release"
+  },
+  "name": "TensorFlowLite",
+  "fileGroups": [
+    "module.modulemap"
+  ],
+  "options": {
+    "groupOrdering": [
+      {
+        "order": [
+          "Sources",
+          "Tests"
+        ]
+      }
+    ],
+    "deploymentTarget": {
+      "iOS": "14.5"
+    },
+    "groupSortPosition": "top",
+    "tabWidth": 3,
+    "indentWidth": 3,
+    "defaultConfig": "Release"
+  },
+  "packages": {
+  },
+  "schemes": {
+    "TensorFlowLite-arch64-ios": {
+      "build": {
+        "targets": {
+          "TensorFlowLite-arch64-ios": "all"
+        }
+      },
+      "run": {
+        "config": "Debug",
+        "commandLineArguments": {
+          "-FIRAnalyticsDebugEnabled": "YES",
+          "-FIRDebugDisabled": "YES"
+        }
+      },
+      "test": {
+        "config": "Debug",
+        "commandLineArguments": {
+          "-FIRAnalyticsDebugEnabled": "YES",
+          "-FIRDebugDisabled": "YES"
+        },
+        "gatherCoverageData": true,
+        "targets": [
+        ]
+      },
+      "profile": {
+        "config": "Release"
+      },
+      "analyze": {
+        "config": "Debug"
+      },
+      "archive": {
+        "config": "Release",
+        "revealArchiveInOrganizer": true
+      }
+    }
+  },
+  "settingGroups": {
+  "versioningSettings": {
+      "MARKETING_VERSION": "1.0",
+      "CURRENT_PROJECT_VERSION": "1"
+    },
+    "baseSettings": {
+    }
+  },
+  "settings": {
+    "base": {
+      "SWIFT_INCLUDE_PATHS": "",
+      "MODULEMAP_FILE": "module.modulemap",
+      "PROJECT_BUNDLE_ID_PREFIX": "com.google",
+      "XCODE_IS_A_FUCKING_BULLSHIT": "YES",
+      "GENERATE_INFOPLIST_FILE": "YES",
+      "OWNER_NAME": "Google_Inc",
+      "SUPPORTS_MACCATALYST": "NO",
+      "SWIFT_VERSION": "5.4",
+      "TARGETED_DEVICE_FAMILY": "1",
+      "DEVELOPMENT_TEAM": "SL34K73738"
+    ,
+      "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
+    }
+  },
+  "targets": {
+    "TensorFlowLite-arch64-ios": {
+      "dependencies": [
+        {
+          "framework": "Dependencies/libtensorflowlite_aarch64-apple-ios.a",
+          "link": true
+        },
+        {
+          "framework": "CoreML.framework",
+          "link": true
+        }
+      ],
+      "buildVersion": 1.0,
+      "deploymentTarget": "1",
+      "info": {
+        "path": "Manifests/Info.plist",
+        "properties": {
+          "DTPlatformName": "iphoneos",
+          "CFBundlePackageType": "$(PRODUCT_BUNDLE_PACKAGE_TYPE)",
+          "CFBundleExecutable": "$(EXECUTABLE_NAME)",
+          "NSHumanReadableCopyright": "$(OWNER_NAME)",
+          "CFBundleDevelopmentRegion": "$(DEVELOPMENT_LANGUAGE)",
+          "CFBundleInfoDictionaryVersion": "6.0",
+          "CFBundleName": "$(PRODUCT_NAME)",
+          "CFBundleIdentifier": "$(PRODUCT_BUNDLE_IDENTIFIER)",
+          "CFBundleVersion": "$(CURRENT_PROJECT_VERSION)",
+          "CFBundleShortVersionString": "$(MARKETING_VERSION)"
+        }
+      },
+      "platform": "iOS",
+      "settings": {
+        "groups": [
+          "versioningSettings",
+          "baseSettings"
+        ],
+        "base": {
+          "OTHER_LDFLAGS": "-lc++",
+          "PRODUCT_NAME": "TensorFlowLite",
+          "FRAMEWORK_SEARCH_PATHS": "$(PROJECT_DIR)/Dependencies",
+          "LIBRARY_SEARCH_PATHS": "$(PROJECT_DIR)/Dependencies",
+          "SWIFT_INCLUDE_PATHS": "${PROJECT_DIR}/",
+          "CODE_SIGN_STYLE": "Manual",
+          "TARGET_TEMP_DIR": "/tmp/Developer/Xcode/DerivedData/Build/Intermediates.noindex/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/$(TARGET_NAME).build/",
+          "SWIFT_SERIALIZE_DEBUGGING_OPTIONS": "NO",
+          "OTHER_SWIFT_FLAGS": "-Xfrontend -no-serialize-debugging-options",
+          "SKIP_INSTALL": "NO",
+          "TARGETED_DEVICE_FAMILY": "1",
+          "MACH_O_TYPE": "mh_dylib",
+          "ENABLE_BITCODE": "YES",
+          "DYLIB_CURRENT_VERSION": "$(CURRENT_PROJECT_VERSION)",
+          "DEFINES_MODULE": "YES",
+          "BUILD_LIBRARY_FOR_DISTRIBUTION": "YES"
+        ,
+          "PRODUCT_BUNDLE_IDENTIFIER": "$(PROJECT_BUNDLE_ID_PREFIX).tensorflowlite",
+          "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
+        },
+        "configs": {
+          "Release": {
+            "SWIFT_TREAT_WARNINGS_AS_ERRORS": "NO",
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "$(inherited)"
+          },
+          "Debug": {
+            "SWIFT_TREAT_WARNINGS_AS_ERRORS": "NO",
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "$(inherited) DEBUG"
+          }
+        }
+      },
+      "sources": [
+        {
+          "path": "Sources",
+          "excludes": [
+          ]
+        }
+      ],
+      "type": "framework"
+    },
+    "TensorFlowLite-arch64-ios-sim": {
+      "dependencies": [
+        {
+          "framework": "Dependencies/libtensorflowlite_aarch64-apple-ios-sim.a",
+          "link": true
+        },
+        {
+          "framework": "CoreML.framework",
+          "link": true
+        }
+      ],
+      "buildVersion": 1.0,
+      "deploymentTarget": "1",
+      "info": {
+        "path": "Manifests/Info.plist",
+        "properties": {
+          "DTPlatformName": "iphoneos",
+          "CFBundlePackageType": "$(PRODUCT_BUNDLE_PACKAGE_TYPE)",
+          "CFBundleExecutable": "$(EXECUTABLE_NAME)",
+          "NSHumanReadableCopyright": "$(OWNER_NAME)",
+          "CFBundleDevelopmentRegion": "$(DEVELOPMENT_LANGUAGE)",
+          "CFBundleInfoDictionaryVersion": "6.0",
+          "CFBundleName": "$(PRODUCT_NAME)",
+          "CFBundleIdentifier": "$(PRODUCT_BUNDLE_IDENTIFIER)",
+          "CFBundleVersion": "$(CURRENT_PROJECT_VERSION)",
+          "CFBundleShortVersionString": "$(MARKETING_VERSION)"
+        }
+      },
+      "platform": "iOS",
+      "settings": {
+        "groups": [
+          "versioningSettings",
+          "baseSettings"
+        ],
+        "base": {
+          "OTHER_LDFLAGS": "-lc++",
+          "PRODUCT_NAME": "TensorFlowLite",
+          "FRAMEWORK_SEARCH_PATHS": "$(PROJECT_DIR)/Dependencies",
+          "LIBRARY_SEARCH_PATHS": "$(PROJECT_DIR)/Dependencies",
+          "SWIFT_INCLUDE_PATHS": "${PROJECT_DIR}/",
+          "CODE_SIGN_STYLE": "Manual",
+          "TARGET_TEMP_DIR": "/tmp/Developer/Xcode/DerivedData/Build/Intermediates.noindex/$(PROJECT_NAME).build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/$(TARGET_NAME).build/",
+          "SWIFT_SERIALIZE_DEBUGGING_OPTIONS": "NO",
+          "OTHER_SWIFT_FLAGS": "-Xfrontend -no-serialize-debugging-options",
+          "SKIP_INSTALL": "NO",
+          "TARGETED_DEVICE_FAMILY": "1",
+          "MACH_O_TYPE": "mh_dylib",
+          "ENABLE_BITCODE": "YES",
+          "DYLIB_CURRENT_VERSION": "$(CURRENT_PROJECT_VERSION)",
+          "DEFINES_MODULE": "YES",
+          "BUILD_LIBRARY_FOR_DISTRIBUTION": "YES",
+          "PRODUCT_BUNDLE_IDENTIFIER": "$(PROJECT_BUNDLE_ID_PREFIX).tensorflowlite",
+          "IPHONEOS_DEPLOYMENT_TARGET": "15.0"
+        },
+        "configs": {
+          "Release": {
+            "SWIFT_TREAT_WARNINGS_AS_ERRORS": "NO",
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "$(inherited)"
+          },
+          "Debug": {
+            "SWIFT_TREAT_WARNINGS_AS_ERRORS": "NO",
+            "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "$(inherited) DEBUG"
+          }
+        }
+      },
+      "sources": [
+        {
+          "path": "Sources",
+          "excludes": [
+          ]
+        }
+      ],
+      "type": "framework"
+    }
+  }}

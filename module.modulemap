@@ -1,0 +1,14 @@
+framework module TensorFlowLite {
+   
+   module C {
+      header "TensorFlowLiteC.h"
+   }
+   
+   module CMetal {
+      header "TensorFlowLiteCMetal.h"
+   }
+   
+   module CCoreML {
+      header "TensorFlowLiteCCoreML.h"
+   }
+}
