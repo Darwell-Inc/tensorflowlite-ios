@@ -1,5 +1,22 @@
 framework module TensorFlowLite {
-   header "TensorFlowLiteC.h"
-   header "TensorFlowLiteCMetal.h"
-   header "TensorFlowLiteCCoreML.h"
+   
+   // without internal separation into modules
+   // this is guaranteed to work in a resulting SPM binary target
+   // header "TensorFlowLiteC.h"
+   // header "TensorFlowLiteCMetal.h"
+   // header "TensorFlowLiteCCoreML.h"
+   
+   // submodule modules
+   module C {
+      header "TensorFlowLiteC.h"
+   }
+   
+   module CMetal {
+      header "TensorFlowLiteCMetal.h"
+   }
+   
+   module CCoreML {
+      header "TensorFlowLiteCCoreML.h"
+   }
+   
 }
