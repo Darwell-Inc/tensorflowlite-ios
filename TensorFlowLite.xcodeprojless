@@ -96,11 +96,11 @@
           "link": true
         },
         {
-          "framework": "CoreML.framework",
+          "sdk": "CoreML.framework",
           "link": true
         },
         {
-          "framework": "Metal.framework",
+          "sdk": "Metal.framework",
           "link": true
         }
       ],
@@ -175,7 +175,7 @@
     "TensorFlowLite-arch64-ios-sim": {
       "dependencies": [
         {
-          "framework": "Metal.framework",
+          "sdk": "Metal.framework",
           "link": true
         },
         {
@@ -183,7 +183,7 @@
           "link": true
         },
         {
-          "framework": "CoreML.framework",
+          "sdk": "CoreML.framework",
           "link": true
         }
       ],
